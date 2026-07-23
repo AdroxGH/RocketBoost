@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
+    AudioSource audioSource;
     [SerializeField] InputAction thrust;
     [SerializeField] InputAction rotation;
     [SerializeField] float ThrustStrength = 100f;
@@ -13,6 +14,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnEnable()
@@ -29,13 +31,23 @@ public class Movement : MonoBehaviour
 
     }
 
-//For the boosting of the rocket
+    //For the boosting of the rocket
     void ProcessThrust()
     {
         if (thrust.IsPressed()){
         rb.AddRelativeForce(ThrustStrength * Time.fixedDeltaTime * Vector3.up);
+             if (!audioSource.isPlaying)
+             {
+            audioSource.Play();
+             }
         }
+        else
+        {
+            audioSource.Stop();
+        }
+        
     }
+
 //For the Rotation of the rocket
     void ProcessRotation()
     {
@@ -59,6 +71,11 @@ public class Movement : MonoBehaviour
         transform.Rotate(rotationThisFrame * Time.fixedDeltaTime * Vector3.forward);
         rb.freezeRotation = false;
     }
+
+
+    //Audio for rocket boost
+
+    
 
 
 
