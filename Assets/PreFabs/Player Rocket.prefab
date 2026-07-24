@@ -131,8 +131,9 @@ MonoBehaviour:
       m_Action: Rotation
       m_Flags: 8
     m_Flags: 0
-  ThrustStrength: 1000
+  ThrustStrength: 3000
   RotationStrength: 175
+  mainEngine: {fileID: 8300000, guid: 6ce2741ad2031224fb1d23f4588f06fb, type: 3}
 --- !u!54 &1410017799797094351
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 6ce2741ad2031224fb1d23f4588f06fb, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
@@ -290,6 +291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0aece4be6040a438372452283f0712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LoadingDelay: 2
+  crashed: {fileID: 8300000, guid: 3af2326e3016b3f45898dd7644706445, type: 3}
+  levelComplete: {fileID: 8300000, guid: 2da3f159f89fb8c449e20f67dd0137cc, type: 3}
 --- !u!1001 &8307815295862281646
 PrefabInstance:
   m_ObjectHideFlags: 0
