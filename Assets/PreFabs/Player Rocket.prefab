@@ -259,6 +259,30 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotation
       m_Flags: 8
+    - m_Name: Arrow Keys
+      m_Id: f9c50690-05ab-45ce-87d9-e8536988dd42
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotation
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: dd91d1e6-4fad-4f23-a0dc-5dcfb80b1af6
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotation
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 4ff4a75a-2c3c-40f1-805b-39861850dfb5
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotation
+      m_Flags: 8
     m_Flags: 0
   ThrustStrength: 3500
   RotationStrength: 200
